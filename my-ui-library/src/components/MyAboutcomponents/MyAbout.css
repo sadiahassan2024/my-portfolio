@@ -1,0 +1,243 @@
+.about-section {
+  background: radial-gradient(ellipse at 15% 50%, #f9d4ff22 0%, transparent 55%),
+              radial-gradient(ellipse at 85% 20%, #d4e9ff22 0%, transparent 55%),
+              #fafafa;
+  padding: 90px 48px 80px;
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+  /* padding-top: 30px; */
+}
+
+/* ── Header ── */
+.about-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.about-eyebrow {
+  display: block;
+  font-size: 1.9rem;
+  padding-top: 2.4rem;
+  font-weight: 500;
+  color: #262121;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.about-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 700;
+  color: #111;
+  margin-left :16px;
+  line-height: 1.15;
+}
+
+/* ══════════════════════════
+   IMAGE + BADGE
+══════════════════════════ */
+.about-img-wrapper {
+  position: relative;
+  width: 280px;
+  height: 340px;
+  flex-shrink: 0;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 22px;
+  background: #f0eeee;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* Rotating badge */
+.about-badge {
+  position: absolute;
+  bottom: -36px;
+  right: -36px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-ring {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  animation: rotateBadge 10s linear infinite;
+}
+
+@keyframes rotateBadge {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.badge-emoji {
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ══════════════════════════
+   RIGHT CONTENT
+══════════════════════════ */
+.about-right {
+  padding-left: 48px;
+}
+
+.about-bio {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+
+/* ══════════════════════════
+   INFO CARDS
+══════════════════════════ */
+.about-cards {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  flex: 1;
+  min-width: 140px;
+  border: 1.5px solid #e8e4e4;
+  border-radius: 16px;
+  padding: 20px 18px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+}
+
+.about-card-icon {
+  color: #555;
+  margin-bottom: 14px;
+  display: flex;
+}
+
+.about-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.about-card-detail {
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ══════════════════════════
+   TOOLS
+══════════════════════════ */
+.about-tools-section {
+  margin-top: 4px;
+}
+
+.about-tools-label {
+  font-size: 0.9rem;
+  color: #777;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.about-tools-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.about-tool-icon {
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid #e4e0e0;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: default;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.about-tool-icon:hover {
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ══════════════════════════
+   RESPONSIVE
+══════════════════════════ */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 72px 20px 60px;
+  }
+
+  .about-right {
+    padding-left: 0;
+    margin-top: 56px;
+  }
+
+  .about-img-wrapper {
+    width: 240px;
+    height: 290px;
+  }
+
+  .about-cards {
+    flex-direction: column;
+  }
+
+  .about-card {
+    min-width: unset;
+  }
+
+  .about-badge {
+    bottom: -30px;
+    right: -20px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .badge-ring {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-img-wrapper {
+    width: 200px;
+    height: 250px;
+  }
+}

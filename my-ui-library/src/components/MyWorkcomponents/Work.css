@@ -1,0 +1,224 @@
+/* ===== Work Section ===== */
+.work-section {
+  padding: 80px 60px;
+  background: linear-gradient(160deg, #fffdf9 0%, #fef5fb 40%, #f8f0ff 100%);
+  font-family: 'Georgia', serif;
+}
+
+/* ===== Header ===== */
+.work-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.work-subtitle {
+  font-size: 15px;
+  color: #888;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.work-title {
+  font-size: 56px;
+  font-weight: 400;
+  color: #111;
+  margin: 0 0 20px 0;
+  font-family: 'Georgia', serif;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.work-description {
+  font-size: 16px;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.75;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ===== Grid ===== */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ===== Card ===== */
+.work-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Live Card Variant ===== */
+.work-card--live {
+  height: 340px;
+}
+
+/* ===== Live Badge ===== */
+.live-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.95);
+  color: #22c55e;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1.5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: livePulse 1.5s infinite;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(1.5); }
+}
+
+/* ===== Card Info Bar ===== */
+.work-card-info {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 14px 18px;
+  gap: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+/* ===== Card Text ===== */
+.work-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.work-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.work-card-category {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.work-card-url {
+  font-size: 11px;
+  color: #a855f7;
+  margin: 3px 0 0 0;
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ===== Arrow Button ===== */
+.work-card-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 50%;
+  background: #111;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.work-card-btn:hover {
+  background: #ff1a6e;
+  transform: scale(1.08);
+}
+
+.work-card-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px) {
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-card--live {
+    height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .work-section {
+    padding: 50px 20px;
+  }
+
+  .work-title {
+    font-size: 38px;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    height: 260px;
+  }
+
+  .work-card--live {
+    height: 280px;
+  }
+}
