@@ -1,0 +1,153 @@
+/* ===== Services Section ===== */
+.services-section {
+  padding: 130px 60px;
+  background: linear-gradient(135deg, #f9f5f0 0%, #fdf0f8 50%, #f0f5ff 100%);
+  min-height: 100vh;
+  font-family: 'Georgia', serif;
+}
+
+/* ===== Header ===== */
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-subtitle {
+  font-size: 16px;
+  color: #555;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.services-title {
+  font-size: 52px;
+  font-weight: 400;
+  color: #111;
+  margin: 0 0 20px 0;
+  font-family: 'Georgia', serif;
+  letter-spacing: -1px;
+}
+
+.services-description {
+  font-size: 16px;
+  color: #555;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ===== Cards Grid ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Individual Card ===== */
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Icon ===== */
+.card-icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #ff4d88, #ff1a6e);
+  border-radius: 14px;
+  font-size: 24px;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(255, 26, 110, 0.35);
+}
+
+.card-icon--text {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: -0.5px;
+}
+
+/* ===== Card Content ===== */
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 12px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.65;
+  margin: 0 0 28px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ===== Read More Link ===== */
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.card-link:hover {
+  color: #ff1a6e;
+  gap: 10px;
+}
+
+.card-arrow {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.card-link:hover .card-arrow {
+  transform: translateX(3px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-section {
+    padding: 50px 20px;
+  }
+
+  .services-title {
+    font-size: 36px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

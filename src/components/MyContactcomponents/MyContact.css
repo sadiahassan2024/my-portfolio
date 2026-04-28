@@ -1,0 +1,281 @@
+/* ===== Contact Section ===== */
+.contact-section {
+  padding: 90px 60px;
+  background: linear-gradient(160deg, #fffdf9 0%, #fef5fb 40%, #f0eeff 100%);
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Header ===== */
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-subtitle {
+  font-size: 15px;
+  color: #888;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.contact-title {
+  font-size: 58px;
+  font-weight: 400;
+  color: #111;
+  font-family: 'Georgia', serif;
+  letter-spacing: -2px;
+  margin: 0 0 18px 0;
+  line-height: 1.1;
+}
+
+.contact-description {
+  font-size: 16px;
+  color: #777;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ===== Form ===== */
+.contact-form {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== Row (name + email) ===== */
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ===== Input ===== */
+.contact-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.85);
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-input:focus {
+  border-color: #c084fc;
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.15);
+}
+
+.contact-input::placeholder {
+  color: #bbb;
+}
+
+/* ===== Textarea ===== */
+.contact-textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 15px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.85);
+  outline: none;
+  resize: vertical;
+  font-family: 'Arial', sans-serif;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  min-height: 180px;
+}
+
+.contact-textarea:focus {
+  border-color: #c084fc;
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.15);
+}
+
+.contact-textarea::placeholder {
+  color: #bbb;
+}
+
+/* ===== Error ===== */
+.contact-error {
+  font-size: 14px;
+  color: #e05a00;
+  background: #fff4ed;
+  border: 1px solid #f9c9a0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 0;
+}
+
+/* ===== Captcha Row ===== */
+.contact-captcha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 14px 20px;
+  max-width: 300px;
+}
+
+.captcha-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  user-select: none;
+}
+
+.captcha-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #111;
+}
+
+.captcha-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.captcha-icon {
+  font-size: 22px;
+}
+
+.captcha-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.3;
+}
+
+.captcha-text span {
+  font-weight: 600;
+  color: #333;
+}
+
+.captcha-text small {
+  font-size: 10px;
+  color: #aaa;
+}
+
+/* ===== Submit Button ===== */
+.contact-btn {
+  align-self: center;
+  padding: 16px 40px;
+  background: #1a1a2e;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.contact-btn:hover {
+  background: #ff1a6e;
+  transform: translateY(-2px);
+}
+
+/* ===== Success Message ===== */
+.contact-success {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-success span {
+  font-size: 48px;
+}
+
+/* ===== Brand Section ===== */
+.contact-brand {
+  margin-top: 70px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 40px;
+  border-top: 1px solid #ebebeb;
+  width: 100%;
+  max-width: 680px;
+}
+
+.contact-brand-name {
+  font-size: 52px;
+  font-weight: 700;
+  color: #111;
+  font-family: 'Georgia', serif;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.contact-brand-dot {
+  color: #a855f7;
+}
+
+.contact-brand-email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #444;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.2s ease;
+}
+
+.contact-brand-email:hover {
+  color: #a855f7;
+}
+
+.contact-brand-icon {
+  width: 18px;
+  height: 18px;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-title {
+    font-size: 38px;
+  }
+
+  .contact-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-captcha {
+    max-width: 100%;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
